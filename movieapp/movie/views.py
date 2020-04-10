@@ -1,5 +1,5 @@
 from django.contrib.auth.models import User
-from rest_framework import generics, permissions
+from rest_framework import generics, permissions, filters
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from rest_framework.reverse import reverse
@@ -19,12 +19,16 @@ def api_root(request, format=None):
 
 
 class MovieList(generics.ListCreateAPIView):
+    search_fields = ['title']
+    ordering_fields = ['title', 'release_date']
+    filter_backends = (filters.SearchFilter, filters.OrderingFilter)  # api/movies/?search=interstellar
+
     queryset = Movie.objects.all()
     serializer_class = MovieSerializer
     permission_classes = (permissions.IsAuthenticatedOrReadOnly,)
 
     def perform_create(self, serializer):
-        serializer.save(owner=self.request.user)  # might require edit user to owner
+        serializer.save(owner=self.request.user)  # check this
 
 
 class MovieDetail(generics.RetrieveUpdateDestroyAPIView):

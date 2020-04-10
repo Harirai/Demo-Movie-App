@@ -9,9 +9,9 @@ class Movie(models.Model):
     release_date = models.DateField()
     director = models.CharField(max_length=100)
     language = models.CharField(default='English', max_length=100)
-    rating = models.PositiveSmallIntegerField(validators=MaxValueValidator(10))
+    rating = models.PositiveIntegerField(validators=[MaxValueValidator(10), ])
     running_time = models.TimeField()
-    owner = models.ForeignKey('auth_user', related_name='movies', on_delete=models.CASCADE)
+    owner = models.ForeignKey('auth.User', related_name='movies', on_delete=models.CASCADE)
 
     class Meta:
         ordering = ['release_date']
