@@ -40,5 +40,7 @@ Where a user can signup/login to create movie database through REST API.
     ```bash
       python manage.py runserver
     ```  
-    
-    
+- Check that the project is running correctly by browsing to
+    ```
+      http://127.0.0.1:8000
+    ```
