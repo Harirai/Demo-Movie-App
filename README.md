@@ -44,3 +44,14 @@ Where a user can signup/login to create movie database through REST API.
     ```
       http://127.0.0.1:8000
     ```
+ 
+
+<h2>Author</h2>
+<blockquote>
+  Harirai Mahajan<br>
+</blockquote>
+<a href='https://github.com/Harirai'> @Harirai </a>
+
+
+
+ 
