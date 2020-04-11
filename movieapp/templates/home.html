@@ -1,16 +1,19 @@
-{% extends 'base.html' %}
 
-{% block title %}Home{% endblock %}
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Movie Application | Home{% endblock %}
 
 {% block content %}
 {% if user.is_authenticated %}
-  Hi {{ user.username }}!
-  <p>Click <a href="{% url 'api' %}">here</a> to go to the api.</p>
-  <p><a href="{% url 'logout' %}">logout</a></p>
+Hi {{ user.username }}!
+<p>Click <a href="{% url 'api' %}">here</a> to go to the api.</p>
+<p><a href="{% url 'logout' %}">logout</a></p>
 {% else %}
-  <p>You are not logged in</p>
-  <a href="{% url 'login' %}">login</a>
-  <a href="{% url 'signup' %}">sign up</a>
-
+<div>
+    <h1><p>You are not logged in</p></h1>
+    <a href="{% url 'login' %}">login</a>
+    <a href="{% url 'signup' %}">sign up</a>
+</div>
 {% endif %}
 {% endblock %}

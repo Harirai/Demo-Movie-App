@@ -1,6 +1,12 @@
 <!DOCTYPE html>
+{% load static %}
+
 <html>
 <head>
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+  <link rel="stylesheet" href="{% static '/css/movie.css' %}">
+
   <meta charset="utf-8">
   <title>{% block title %}Movie Application{% endblock %}</title>
 </head>
