@@ -9,8 +9,8 @@ class Movie(models.Model):
     release_date = models.DateField()
     director = models.CharField(max_length=100)
     language = models.CharField(default='English', max_length=100)
-    rating = models.PositiveIntegerField(validators=[MaxValueValidator(10), ])
-    running_time = models.TimeField()
+    rating = models.FloatField(validators=[MaxValueValidator(10), ])
+    running_time = models.PositiveIntegerField(help_text="In minutes", default=100)
     owner = models.ForeignKey('auth.User', related_name='movies', on_delete=models.CASCADE)
 
     class Meta:

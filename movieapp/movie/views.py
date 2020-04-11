@@ -1,4 +1,7 @@
+from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
+from django.urls import reverse_lazy
+from django.views import generic
 from rest_framework import generics, permissions, filters
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
@@ -16,6 +19,12 @@ def api_root(request, format=None):
         'users': reverse('user-list', request=request, format=format),
         'movies': reverse('movie-list', request=request, format=format)
     })
+
+
+class SignUp(generic.CreateView):
+    form_class = UserCreationForm
+    success_url = reverse_lazy('login')
+    template_name = 'signup.html'
 
 
 class MovieList(generics.ListCreateAPIView):
