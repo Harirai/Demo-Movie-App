@@ -19,9 +19,9 @@ Where a user can signup/login to create movie database through browsable REST AP
     ```bash
       git clone https://github.com/Harirai/Demo-Movie-App.git
     ```
-- Change the directory to Movie-Web-App
+- Change the directory to Demo-Movie-App
     ```bash
-      cd Movie-Web-App
+      cd Demo-Movie-App
     ```
 - Activate the virtual env
     ```bash
