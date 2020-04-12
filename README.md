@@ -23,9 +23,17 @@ Where a user can signup/login to create movie database through browsable REST AP
     ```bash
       cd Demo-Movie-App
     ```
+- Create the virtual environment 'myenv'
+    ```bash
+      virtualenv -p python3.6 myenv
+    ```
 - Activate the virtual env
     ```bash
       source myenv/bin/activate
+    ```
+- Install the requirements
+    ```bash
+      pip install -r requirements.txt
     ```
 - Change the directory to movieapp
     ```bash
