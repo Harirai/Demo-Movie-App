@@ -1,7 +1,7 @@
 # Demo-Movie-App
 This is a movie web application using Django REST Framework.
 
-Where a user can signup/login to create movie database through REST API. 
+Where a user can signup/login to create movie database through browsable REST API. 
 - Users can edit and delete their own entry only, in database.
 - Movie data can be seen (but cannot be edited) by anyone. (without even signup/login).
 
