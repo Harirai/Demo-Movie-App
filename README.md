@@ -1,4 +1,4 @@
-# Demo-Movie-App
+# Movie-Web-App
 This is a movie web application using Django REST Framework.
 
 Where a user can signup/login to create movie database through browsable REST API. 
@@ -19,9 +19,9 @@ Where a user can signup/login to create movie database through browsable REST AP
     ```bash
       git clone https://github.com/Harirai/Demo-Movie-App.git
     ```
-- Change the directory to Demo-Movie-App
+- Change the directory to Movie-Web-App
     ```bash
-      cd Demo-Movie-App
+      cd Movie-Web-App
     ```
 - Activate the virtual env
     ```bash
